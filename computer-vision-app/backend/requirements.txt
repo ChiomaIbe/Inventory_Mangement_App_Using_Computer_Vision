@@ -1,0 +1,10 @@
+Flask
+fastapi
+uvicorn
+pydantic
+numpy
+opencv-python
+requests
+edge-impulse-sdk
+python-multipart
+python-dotenv
