@@ -61,6 +61,7 @@ The frontend is built using React and provides a user interface for interacting 
 
 Once both the backend and frontend are running, you can access the application in your web browser. The frontend will communicate with the backend to provide real-time counts of boxes and defected boxes.
 
+Author ``` Chioma ```
 ## License
 
 This project is licensed under the MIT License.
