@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Box', 'damage_box']
+
+roboflow:
+  workspace: computer-vision-hn4pv
+  project: box_detection-akzbb-5p4ls
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/computer-vision-hn4pv/box_detection-akzbb-5p4ls/dataset/1
