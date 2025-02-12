@@ -1,16 +1,16 @@
-from fastapi.reponses import HTMLResponse
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from flaskwebgui import FlaskUI, close_application
 from websockets.exceptions import ConnectionClosed
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request
 import cv2, asyncio
 from ultralytics import YOLO
 
 app = FastAPI()
 camera = cv2.VideoCapture(0)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="public/"))
 templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
