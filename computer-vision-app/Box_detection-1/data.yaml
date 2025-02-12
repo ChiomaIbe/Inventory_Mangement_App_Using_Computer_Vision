@@ -1,6 +1,6 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: /workspaces/Inventory_Mangement_App_Using_Computer_Vision/computer-vision-app/Box_detection-1/train/images
+val: /workspaces/Inventory_Mangement_App_Using_Computer_Vision/computer-vision-app/Box_detection-1/valid/images
+test: /workspaces/Inventory_Mangement_App_Using_Computer_Vision/computer-vision-app/Box_detection-1/test/images
 
 nc: 2
 names: ['Box', 'damage_box']
