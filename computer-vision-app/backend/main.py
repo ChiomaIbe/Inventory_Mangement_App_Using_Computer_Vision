@@ -19,7 +19,7 @@ async def root(request: Request):
 
 @app.get("/home", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    return templates.TemplateResponse("some_page.html", {"request": request})
 
 @app.get("/close")
 async def close_server():
@@ -29,7 +29,7 @@ def start_fastapi(**kwargs):
     import uvicorn
     uvicorn.run(**kwargs)
 
-@app.websockets("/ws")
+@app.websocket("/ws")
 async def get_stream(websocket: WebSocket):
     await websocket.accept()
     try:
@@ -40,7 +40,7 @@ async def get_stream(websocket: WebSocket):
             else:
                 model = YOLO("yolov5s.pt")
                 results = model.predict(frame, device=[0])
-                frame = result[0].plot()
+                frame = results[0].plot()
                 ret, buffer = cv2.imencode('.jpg', frame)
                 await websocket.send_bytes(buffer.tobytes())
                 await websocket.send_text("some text")
